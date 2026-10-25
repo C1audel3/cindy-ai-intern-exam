@@ -1,0 +1,18 @@
+# Local reference material
+/AI工程实习生笔试题.docx
+/.reference/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+
+# Build and temporary files
+node_modules/
+dist/
+build/
+.cache/
+*.log
+__pycache__/
+*.pyc
