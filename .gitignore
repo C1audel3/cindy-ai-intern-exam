@@ -16,3 +16,8 @@ build/
 *.log
 __pycache__/
 *.pyc
+
+# Local writing; keep these three reports out of the remote repository
+/Part0a_项目导览.md
+/做题记录.md
+/项目结构报告.md
