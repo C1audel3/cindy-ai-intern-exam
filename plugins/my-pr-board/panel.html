@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/panel.css">
+  <script src="/panel.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>待处理 PR</h1>
+        <p id="summary">读取中…</p>
+      </div>
+      <button id="refresh" type="button">刷新</button>
+    </header>
+    <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    <div id="list" class="list" aria-live="polite"></div>
+  </main>
+</body>
+</html>

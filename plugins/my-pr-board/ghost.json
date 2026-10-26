@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 3,
+  "id": "my-pr-board",
+  "name": "我的 PR 看板",
+  "description": "查看自己待处理的 GitHub Pull Request 与 CI 状态，并让 Cindy 分析失败检查。",
+  "whenToUse": "查看我创建或待我审阅的 GitHub PR、检查 CI 状态、排查失败检查时使用。",
+  "version": "0.1.0",
+  "minCindyVersion": "0.1.64",
+  "entry": "main.js",
+  "launch": "on-demand",
+  "panel": {
+    "title": "我的 PR",
+    "html": "panel.html",
+    "position": "right"
+  },
+  "settingsHtml": "settings.html",
+  "network": {
+    "hosts": ["api.github.com"],
+    "secrets": [{
+      "key": "github_token",
+      "label": "GitHub Token",
+      "source": "user",
+      "hint": "使用可读取目标仓库 PR 与检查状态的细粒度 Token",
+      "url": "https://github.com/settings/personal-access-tokens",
+      "inject": {
+        "header": "Authorization",
+        "format": "Bearer {value}",
+        "hosts": ["api.github.com"]
+      }
+    }]
+  },
+  "agent": { "tasks": true }
+}

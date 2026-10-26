@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/settings.js" defer></script>
+</head>
+<body style="margin:0;padding:12px;font:inherit;color:inherit">
+  <label for="token">GitHub Token</label>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
+    <input id="token" type="password" autocomplete="off" placeholder="粘贴新 Token" style="flex:1;min-width:160px;padding:7px">
+    <button id="save" type="button">保存</button>
+    <button id="remove" type="button">删除</button>
+  </div>
+  <p id="state" role="status" style="margin:8px 0"></p>
+  <p style="margin:8px 0;font-size:12px">仅授权目标仓库的 PR 与检查结果读取权限。Token 由 Cindy 保管，插件不能读回。</p>
+  <a href="https://github.com/settings/personal-access-tokens">在 GitHub 创建 Token</a>
+</body>
+</html>
